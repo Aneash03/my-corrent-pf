@@ -1,0 +1,108 @@
+:root {
+  --bg: #f0f0f0;
+  --text: #222;
+  --card: #fff;
+  --accent: #007bff;
+}
+
+body.dark {
+  --bg: #181818;
+  --text: #f0f0f0;
+  --card: #222;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: var(--card);
+  padding: 10px 20px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+#hero {
+  padding: 40px 20px;
+  background: var(--accent);
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid white;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.skills-grid span, .card {
+  background: var(--card);
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #aaa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--card);
+  margin-top: 40px;
+}
