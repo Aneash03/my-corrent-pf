@@ -1,0 +1,19 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_TLS_CERTDIR: ""
+
+stages:
+  - docker
+
+docker_build_push:
+  stage: docker
+  script:
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - docker build -t $DOCKER_USERNAME/frontend-portfolio:latest .
+    - docker push $DOCKER_USERNAME/frontend-portfolio:latest
+  only:
+    - main
